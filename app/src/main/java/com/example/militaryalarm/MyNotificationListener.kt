@@ -23,7 +23,11 @@ class MyNotificationListener : NotificationListenerService() {
             val text = extras.getCharSequence(Notification.EXTRA_TEXT)?.toString() ?: ""
 
             val sharedPref = getSharedPreferences("WorkPrefs", Context.MODE_PRIVATE)
-            val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
+            val calendar = java.util.Calendar.getInstance()
+            if (calendar.get(java.util.Calendar.HOUR_OF_DAY) < 5) {
+                calendar.add(java.util.Calendar.DAY_OF_YEAR, -1)
+            }
+            val currentDate = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault()).format(calendar.time)
             val currentTime = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date()) // 💡 찍힌 시간 추가
 
             if (text.contains("출근처리")) {
