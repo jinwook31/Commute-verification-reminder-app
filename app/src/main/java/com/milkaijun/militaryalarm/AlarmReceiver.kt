@@ -1,4 +1,4 @@
-package com.example.militaryalarm
+package com.milkaijun.militaryalarm
 
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
@@ -10,9 +10,6 @@ import android.content.Intent
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {

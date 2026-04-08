@@ -1,4 +1,4 @@
-package com.example.militaryalarm // 패키지명 확인!
+package com.milkaijun.militaryalarm // 패키지명 확인!
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -8,7 +8,6 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -24,7 +23,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.militaryalarm.ui.theme.MilitaryalarmTheme
+import com.milkaijun.militaryalarm.ui.theme.MilitaryalarmTheme
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date

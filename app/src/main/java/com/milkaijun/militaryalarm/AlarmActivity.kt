@@ -1,4 +1,4 @@
-package com.example.militaryalarm // 패키지명 확인!
+package com.milkaijun.militaryalarm // 패키지명 확인!
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -27,7 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.militaryalarm.ui.theme.MilitaryalarmTheme
+import com.milkaijun.militaryalarm.ui.theme.MilitaryalarmTheme
 
 class AlarmActivity : ComponentActivity() {
     private var mediaPlayer: MediaPlayer? = null

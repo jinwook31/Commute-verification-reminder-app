@@ -1,4 +1,4 @@
-package com.example.militaryalarm
+package com.milkaijun.militaryalarm
 
 import android.content.BroadcastReceiver
 import android.content.Context

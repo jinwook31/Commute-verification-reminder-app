@@ -1,4 +1,4 @@
-package com.example.militaryalarm.ui.theme
+package com.milkaijun.militaryalarm.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

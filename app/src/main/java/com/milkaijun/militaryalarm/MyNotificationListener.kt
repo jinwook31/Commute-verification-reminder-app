@@ -1,4 +1,4 @@
-package com.example.militaryalarm
+package com.milkaijun.militaryalarm
 
 import android.app.Notification
 import android.content.Context

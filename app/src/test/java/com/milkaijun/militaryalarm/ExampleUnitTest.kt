@@ -1,4 +1,4 @@
-package com.example.militaryalarm
+package com.milkaijun.militaryalarm
 
 import org.junit.Test
 
