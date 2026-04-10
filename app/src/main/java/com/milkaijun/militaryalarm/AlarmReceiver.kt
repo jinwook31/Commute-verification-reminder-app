@@ -20,6 +20,18 @@ class AlarmReceiver : BroadcastReceiver() {
             calendar.add(java.util.Calendar.DAY_OF_YEAR, -1) // 하루 빼기
         }
         val currentDate = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault()).format(calendar.time)
+
+        val vacationStart = sharedPref.getString("vacationStartDate", "") ?: ""
+        val vacationEnd = sharedPref.getString("vacationEndDate", "") ?: ""
+
+        if (vacationStart.isNotEmpty() && vacationEnd.isNotEmpty()) {
+            // yyyy-MM-dd 형식은 문자열 비교(>=, <=)가 정상적으로 동작합니다.
+            if (currentDate in vacationStart..vacationEnd) {
+                Log.d("AlarmLog", "휴가/출장 기간($vacationStart ~ $vacationEnd)이므로 알람을 생략합니다.")
+                return // 여기서 함수를 종료하여 알람을 울리지 않음
+            }
+        }
+
         val alarmType = intent.getStringExtra("ALARM_TYPE") ?: "IN"
         val skipWeekends = sharedPref.getBoolean("skipWeekends", true)
 
